@@ -5,7 +5,10 @@ async function register(e) {
   console.log(e)
   try {
     const registerForm = $("form-register")
-    const {data, error} = await query("./register.php", new FormData(registerForm), "POST")
+    const {data, error} = await query("./register.php", {
+      body: new FormData(registerForm), 
+      method: "POST"
+    })
     console.log(data, error)
   } catch (error) {
     
