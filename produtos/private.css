@@ -1,0 +1,6 @@
+.produtos-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 95vw;
+}

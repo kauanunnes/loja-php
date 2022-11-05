@@ -1,18 +1,22 @@
-export async function query(url, body) {
+export async function query(url, {extraHeaders, body, method, ...args} = {}) {
   try {
     const response = await fetch(url, {
-      method: "POST",
+      method: method || "GET",
+      headers: {
+        ...extraHeaders,
+      },
       body
-    })
+    });
     return {
-      data: response,
+      data: await response.json(),
       error: null,
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return {
       data: null,
       error: error,
     }
   }
+
 }

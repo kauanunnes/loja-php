@@ -1,4 +1,4 @@
-<?
+<?php
   include '../php/database.php';
   $name = $_POST["name"];
   $cpf = $_POST["cpf"];

@@ -1,7 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+a.products::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+a.products:hover::before {
+  width: 100%;
+
+}
+
+header.header {
+  width: 100%;
+  max-width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header.header span {
+  font-weight: 700;
+  font-size: 16pt;
+}
+
+header.header img{
+  display: block;
+  max-width: 100%;
 }
 
 form {
@@ -44,5 +90,28 @@ form button:hover {
 }
 
 .container {
-  padding: 10px;
+  padding: 20px 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container.form-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+span.register-text {
+  font-size: 10pt;
+}
+
+span.register-text a {
+  color: rgb(55, 68, 255);
+}
+
+span.register-text a:hover {
+  text-decoration: underline;
 }

@@ -1,15 +1,20 @@
 import {$} from "../js/getElement.js"
 import {query} from "../js/services.js"
 
-async function register(e) {
-  console.log(e)
+async function login(e) {
   try {
-    const registerForm = $("form-register")
-    const {data, error} = await query("./register.php", new FormData(registerForm))
-    console.log(data, error)
+    const formLogin = $("form-login")
+    const {data, error} = await query("./login.php", new FormData(formLogin), "POST")
+    if (!data.loggedin) {
+      return
+    }
+
+    localStorage.setItem("user", JSON.stringify(data))
+    window.location = "/"
   } catch (error) {
     
   }
 }
+  
+window.login = login    
 
-window.register = register  
