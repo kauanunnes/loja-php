@@ -13,7 +13,7 @@ function intoArray(obj) {
 }
 export async function getProducts(phpFile = './hidrateData.php' ) {
   const {id} = JSON.parse(localStorage.getItem("user"))
-  let cart = await query("./server/getCarrinho.php", {
+  let cart = await query("/carrinho/server/getCarrinho.php", {
     body: JSON.stringify({userId: id}),
     method: "POST"
     }
@@ -26,7 +26,7 @@ export async function getProducts(phpFile = './hidrateData.php' ) {
     };
   }
 
-  const { data, error } = await query(phpFile, {
+  const { data, error } = await query("/carrinho/hidrateData.php", {
     method: "GET",
   });
   const products = []
@@ -72,18 +72,24 @@ function renderTotal(total) {
   else render(
     "total",
     html`
-      <h2>
+    <div class="finish-shopping">
+        <h2>
         Total: R$ ${total}
-        <h2 />
-        <button>
+        </h2>
+        <button class="btn">
           <a href="./checkout">Finalizar compra</a>
         </button>
-      </h2>
+    </div>  
     `
   );
 }
 async function onMount(){
   // verify if is logged
+  const user = JSON.parse(localStorage.getItem("user"))
+  if (!user) {
+    window.location = "/login"
+    return
+  }
   const { products, cart } = await getProducts("../produtos/queryProducts.php");
   const total = products.reduce(
     (acc, product) => {

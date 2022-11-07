@@ -10,7 +10,7 @@
   try {
     $sql = "INSERT INTO user (nome, cpf, email, senha) VALUES (?,?,?,?)";
     $conn->prepare($sql)->execute([$name, $cpf, $email, $password]);
-    echo "Inserido com sucesso!";
+    echo json_encode(["message"=>"Inserido com sucesso!"]);
   } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
   }

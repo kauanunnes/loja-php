@@ -1,17 +1,22 @@
 .container {
   max-width: 900px;
 }
+
 ul.produtos-lista {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
   max-width: 95vw;
   list-style-type: none;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 ul.produtos-lista li {
   padding: 10px;
+  max-width: 300px;
 }
 
 ul.produtos-lista li img {

@@ -7,6 +7,8 @@ export async function query(url, {extraHeaders, body, method, ...args} = {}) {
       },
       body
     });
+    console.log(response)
+
     return {
       data: await response.json(),
       error: null,

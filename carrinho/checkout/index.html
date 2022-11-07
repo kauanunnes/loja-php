@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <script defer type="module" src="./script.js"></script>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="/"><img src="../../img/logo.svg" alt="logo gaming shop"></a>
+    <a href="/produtos/" class="products"><span>Produtos</span></a>
+    <div class="user-options">
+      <a href="/carrinho/"><img src="../../img/cart.svg" alt="carrinho"></a>
+      <a href="/login/"><img src="../../img/user.svg" alt="user profile"></a>
+    </div>
+  </header>
+  <div class="container" id="main">
+    <h1>Checkout</h1>
+    <form id="form" class="base-form" onsubmit="submitPayment(event)">
+        <input type="number" class="form-control" id="cardNumber" placeholder="Número do cartão">
+        <input type="text" class="form-control" id="cardName" placeholder="Nome do titular">        
+        <input type="date" class="form-control" id="cardExpiry" placeholder="Validade">
+        <input type="number" class="form-control" id="cardCVC" placeholder="Código de segurança">
+      <button type="submit" class="btn btn-primary">Finalizar compra</button>
+    </form>
+    <div id="total">
+      Total: 
+        <div class="loader">
+          Carregando...
+        </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -51,3 +51,20 @@
 .remove-btn {
   background-color: rgb(196, 93, 93);
 }
+
+.btn {
+  margin-top: 20px;
+}
+
+.btn, a:not(.products){
+  color: white;
+}
+
+.finish-shopping {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+

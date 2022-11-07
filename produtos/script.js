@@ -21,7 +21,7 @@ function populateProducts(products) {
     .map((product) => {
       return `
     <li>
-      <img src="${product.url}" alt="${product.nome}" />
+      <img src="${product.url}" alt="${product.nome}" onerror="this.onerror=null; this.src='https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6'" />
       <div class="description">
         <h3>
           ${product.nome}
@@ -54,6 +54,10 @@ async function onMount(){
 
 async function addToCart(id) {
   const user = JSON.parse(localStorage.getItem("user"))
+  if (!user) {
+    window.location = "/login"
+    return
+  }  
   await query("../carrinho/server/addProducts.php", {
     body: JSON.stringify({id, userId: user.id}),
     method: "POST"

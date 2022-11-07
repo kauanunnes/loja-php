@@ -6,75 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Home</title>
+    <style>
+        body {
+            padding-top: 40px !important;
+
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-      <a href="/"><img src="../img/logo.svg" alt="logo gaming shop"></a>
-      <a href="/produtos/" class="products"><span>Produtos</span></a>
-      <a href="/carrinho/"><img src="../img/cart.svg" alt="carrinho"></a>
-    </header>
-    <div class="container">
-        <span>
-            <p>
-                Mensagem para cativar o usuario
-            </p>
+    <div class="main-msg">
+        <span class="text-animation">
+            Compre na maior revendedora de eletrônicos do país!
         </span>
     </div>
-    <div class="container">
+    <header class="header">
+        <a href="/"><img src="../img/logo.svg" alt="logo gaming shop"></a>
+        <a href="/produtos/" class="products"><span>Produtos</span></a>
+        <div class="user-options">
+          <a href="/carrinho/"><img src="../img/cart.svg" alt="carrinho"></a>
+          <a href="/login/"><img src="../img/user.svg" alt="user profile"></a>
+        </div>
+    </header>
+    <div class="container landing-page-container">
+        <img src="./img/landing-page.svg" alt="landing page image">
+        <h1 class="msg-landing-page">
+            Encontre aqui os <strong>MELHORES</strong> eletrônicos com a melhor qualidade da galáxia!
+            <br><button class="btn"><a href="/produtos/">COMPRE AQUI!</a></button>
+        </h1>
+    </div>
+    <div class="container testimonials">
+        <h1>FEEDBACKS</h1>
         <article>
-            <img src="https://pbs.twimg.com/media/FgkVExQakAEUWPs?format=png&name=small" alt="User">
+            <img src="./img/undraw_female_avatar_re_59g8.svg" alt="User">
             <span>
                 <p>
-                    Testimonial 1
+                    <strong>Maria:</strong> simplesmente AMO esta loja! 
                 </p>
             </span>
         </article>
         <article>
-            <img src="https://pbs.twimg.com/media/FgkVExQakAEUWPs?format=png&name=small" alt="User">
+            <img src="./img/undraw_male_avatar_re_r7m1.svg" alt="User">
             <span>
                 <p>
-                    Testimonial 2
+                    <strong>Mario:</strong> compro todos meus eletrônicos na gaming shop, a melhor. 
+                    
                 </p>
             </span>
         </article>
         <article>
-            <img src="https://pbs.twimg.com/media/FgkVExQakAEUWPs?format=png&name=small" alt="User">
+            <img src="./img/undraw_female_avatar_re_59g8.svg" alt="User">
             <span>
                 <p>
-                    Testimonial 3
+                    <strong>Joana:</strong> melhor atendimento da internet! 
                 </p>
             </span>
         </article>
     </div>
-    <div class="contact">
-        <address>
-            <p>
-                Endereço: Rua dos Bobos, 0
-            </p>
-        </address>
-        <contact>
-            <p>
-                Contato: (00) 00000-0000
-            </p>
-        </contact>
-    </div>
+    
     <footer class="footer">
-        <p>
-            Todos os direitos reservados
-        </p>
-        <ul>
-            <li>
-                <a href="https://www.facebook.com/">
-                    <img src="public/images/fb.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/">
-                    <img src="public/images/ig.png" alt="Instagram">
-                </a>
-                <a href="https://twitter.com/">
-                    <img src="public/images/tw.png" alt="Twitter">
-                </a>
-            </li>
-        </ul>
+        <div class="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14411.629881099463!2d-49.2740054!3d-25.441356850000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1667862887569!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+            <p><strong>Endereço</strong>: Rua das Marias, 900</p>
+            <p>Bairro dos Jõaos, Curitiba - PR</p>
+            <p><strong>Telefone:</strong> <a href="tel:80">+55 41 111-1111</a></p>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <img src="./img/facebook-svgrepo-com.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <img src="./img/instagram-svgrepo-com.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/">
+                        <img src="./img/twitter-svgrepo-com.svg" alt="Twitter">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
     </footer>
 </body>
 </html>
