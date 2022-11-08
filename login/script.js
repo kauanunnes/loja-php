@@ -9,7 +9,17 @@ async function login(e) {
       method: "POST"
     })
     if (!data.loggedin) {
+      const span = document.createElement("span")
+      span.id = "error-login"
+      span.classList.add("error")
+      span.innerHTML = "Algo deu errado! Tente novamente."
+      formLogin.appendChild(span)
       return
+    } else {
+      const span = $("error-login")
+        if (span) {
+          span.remove();
+        }
     }
 
     localStorage.setItem("user", JSON.stringify(data))

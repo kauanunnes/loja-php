@@ -22,11 +22,14 @@
     <div id="container-register">
       <h1>Faça seu registro</h1>
       <form onsubmit="event.preventDefault(); register()" class="base-form" id="form-register" method="post"> 
-        <input type="text" name="name" id="name" placeholder="Seu nome">
-        <input type="text" name="cpf" id="cpf" placeholder="Seu CPF" maxlength="11"> 
-        <input type="email" name="email" id="email" placeholder="Seu e-mail">
-        <input type="password" name="password" id="password" placeholder="Sua senha">
+        <input type="text" name="name" id="name" placeholder="Seu nome" required>
+        <input type="text" name="cpf" id="cpf" placeholder="Seu CPF" required maxlength="11"> 
+        <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+        <input type="password" name="password" id="password" placeholder="Sua senha" required>
+        <input type="password" name="confirm" id="confirm" placeholder="Confirme sua senha" required>
         <button type="submit" id="btn-register">Registrar</button>
+        <span class="register-text">Já possui login? <a href="/login">faça aqui.</a></span>
+
       </form>  
     </div>
   </div>

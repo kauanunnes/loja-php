@@ -248,3 +248,7 @@ h1.msg-landing-page a {
   gap: 20px;
   flex-direction: column;
 }
+
+.error {
+  color: red;
+}
