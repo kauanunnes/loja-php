@@ -68,3 +68,13 @@
   padding: 10px 20px;
 }
 
+
+form.base-form {
+  margin: 10px 0;
+}
+
+form.base-form select#tipo {
+  padding: 10px 15px;
+  background-color: white;
+  cursor: pointer;
+}

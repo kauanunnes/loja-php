@@ -17,7 +17,6 @@ async function getTotal(userId) {
     },
     0
   );
-  console.log(total)
   return total
 }
 
@@ -38,7 +37,7 @@ async function submitPayment(e) {
   const total = await getTotal(userId);
   const formData = {
     valor_total: total,
-    tipo: "Credit Card",
+    tipo: $("tipo").value,
   };
   // verify is is logged in
   const { data, error } = await query("./checkout.php", {

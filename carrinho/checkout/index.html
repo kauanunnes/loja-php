@@ -7,6 +7,7 @@
   <title>Checkout</title>
   <script defer type="module" src="./script.js"></script>
   <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../cartStyle.css">
 </head>
 <body>
   <header class="header">
@@ -20,18 +21,20 @@
   <div class="container" id="main">
     <h1>Checkout</h1>
     <form id="form" class="base-form" onsubmit="submitPayment(event)">
-        <input type="number" class="form-control" id="cardNumber" placeholder="Número do cartão">
-        <input type="text" class="form-control" id="cardName" placeholder="Nome do titular">        
-        <input type="date" class="form-control" id="cardExpiry" placeholder="Validade">
-        <input type="number" class="form-control" id="cardCVC" placeholder="Código de segurança">
+      <select name="tipo" id="tipo">
+        <option value="" selected disabled>Selecione o tipo de pagamento</option>
+        <option value="PIX">Pix</option>
+        <option value="Cartão de Crédito">Cartão de Crédito</option>
+      </select>
+      <div id="total">
+        Total: 
+          <div class="loader">
+            Carregando...
+          </div>
+      </div>
       <button type="submit" class="btn btn-primary">Finalizar compra</button>
     </form>
-    <div id="total">
-      Total: 
-        <div class="loader">
-          Carregando...
-        </div>
-    </div>
+    
   </div>
   
 </body>

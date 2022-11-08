@@ -10,6 +10,7 @@ async function register(e) {
       method: "POST"
     })
     console.log(data, error)
+    window.location.href = "/login"
   } catch (error) {
     
   }
